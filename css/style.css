@@ -1,0 +1,19 @@
+.overlay {
+    transition: opacity 500ms;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* .popup {
+    transition: all 5s ease-in-out;
+} */
+
+.close {
+    top: 8px;
+    right: 20px;
+    transition: all 200ms;
+}

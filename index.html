@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo App - AngularJS</title>
-    <link rel="icon" href="images/favicon.png" type="image/icon" sizes="16x16">
+    <link rel="icon" href="favicon.jpg" type="image/icon" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.0.2/tailwind.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -20,29 +20,51 @@
             </div>
             <div class="pt-4">
                 <!-- <div class="font-bold text-xl mb-2">Activities</div> -->
-                <label class="block leading-loose">
+                <label class="block leading-loose text-gray-800">
                     <input class="mr-3" type="checkbox">
-                    <span class="">Morning Workout</span>
+                    <span class="line-through">Morning Workout</span>
                 </label>
-                <label class="block leading-loose">
+                <label class="block leading-loose text-gray-800">
                     <input class="mr-3" type="checkbox">
                     <span class="">Breakfast</span>
                 </label>
-                <label class="block leading-loose">
+                <label class="block leading-loose text-gray-800">
                         <input class="mr-3" type="checkbox">
                         <span class="">Go to the Mall</span>
                 </label>
-                <label class="block leading-loose">
+                <label class="block leading-loose text-gray-800">
                             <input class="mr-3" type="checkbox">
                             <span class="">Meeting with friend</span>
                 </label>
             </div>
             <hr class="my-6 border-t border-red-300">
-            <button class="float-right bg-orange-500 hover:bg-orange-700 text-white text-4xl font-medium px-4 pb-1 rounded-full shadow-lg ">
-            +</button>
+            <a href="#add-item-popup" class="float-right bg-orange-500 hover:bg-orange-600 text-white text-4xl font-medium px-4 pb-1 rounded-full shadow-lg">
+            +</a>
         </div>
     </div>
 
+    <div id="add-item-popup" class="overlay fixed inset-0 invisible opacity-0">
+        <div class="popup mx-auto my-48 p-4 bg-white rounded w-3/4 md:w-1/4 relative shadow-2xl">
+            <h2 class="font-medium text-xl mt-0">Add here</h2>
+            <a class="close absolute text-3xl" href="#">&times;</a>
+            <div class="flex mt-4">
+                <form class="flex flex-col md:flex-row">
+                    <input class="border-b border-b-2 border-orange-500 md:w-3/4 appearance-none text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Add event" aria-label="Full name">
+                    <button class="w-2/5 self-center mt-4 md:w-auto flex-shrink-0 bg-orange-500 hover:bg-orange-600 border-orange-500 hover:border-orange-600 text-sm border-4 text-white py-1 px-4 rounded" type="button">
+                    Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#add-item').on('click', function() {
+                $('#add-item-modal').show();
+            });
+        });
+    </script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
     <script src="js/index.js"></script>
 </body>
