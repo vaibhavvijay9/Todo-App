@@ -22,8 +22,8 @@
             </div>
             <div class="pt-4">
                 <label ng-repeat="event in events" class="block leading-loose text-gray-800">
-                    <input class="mr-3" type="checkbox">
-                    <span ng-class="{'line-through': event.done=='true'}">{{event.text}}</span>
+                    <input class="mr-3" type="checkbox" ng-model="event.done">
+                    <span ng-class="{'line-through text-gray-500': event.done}">{{event.text}}</span>
                 </label>
             </div>
             <hr class="my-6 border-t border-red-300">
