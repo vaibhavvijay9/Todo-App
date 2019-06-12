@@ -9,6 +9,9 @@ app.controller('TodoAppController', function($scope) {
         { text: 'develop corner using MEAN', done: false }
     ];
 
-    // $scope.getAllEvents = function() {}
+    $scope.addTodoEvent = function() {
+        $scope.events.push({ text: $scope.newEventText, done: false });
+        document.getElementById('add-item-popup').classList.add('close-modal-on-submit');
+    }
 
 });

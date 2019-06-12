@@ -17,3 +17,7 @@
     right: 20px;
     transition: all 200ms;
 }
+
+.close-modal-on-submit {
+    visibility: hidden;
+}

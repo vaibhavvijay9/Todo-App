@@ -37,20 +37,19 @@
             <h2 class="font-medium text-xl mt-0">Add here</h2>
             <a class="close absolute text-3xl" href="#">&times;</a>
             <div class="flex mt-4">
-                <form class="flex flex-col md:flex-row">
-                    <input class="border-b border-b-2 border-orange-500 md:w-3/4 appearance-none text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Add event" aria-label="Full name">
-                    <button class="w-2/5 self-center mt-4 md:w-auto flex-shrink-0 bg-orange-500 hover:bg-orange-600 border-orange-500 hover:border-orange-600 text-sm border-4 text-white py-1 px-4 rounded" type="button">
-                    Add</button>
+                <form novalidate name="myForm" ng-submit="addTodoEvent()" class="flex flex-col md:flex-row">
+                    <input ng-model="newEventText" name="newEventText" required class="border-b border-b-2 border-orange-500 md:w-3/4 appearance-none text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Add event">
+                    <input ng-disabled="!newEventText" id="popup-add-button" class="w-2/5 self-center mt-4 md:w-auto flex-shrink-0 bg-orange-500 hover:bg-orange-600 border-orange-500 hover:border-orange-600 text-sm border-4 text-white py-1 px-4 rounded" type="submit" value="Add">
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript">
         $(document).ready(function() {
-            $('#add-item').on('click', function() {
-                $('#add-item-modal').show();
+            $('#popup-add-button').on('click', function() {
+                $('#add-item-popup').addClass('invisible');
             });
         });
     </script> -->
