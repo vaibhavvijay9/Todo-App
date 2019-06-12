@@ -27,15 +27,15 @@
                 </label>
             </div>
             <hr class="my-6 border-t border-red-300">
-            <a href="#add-item-popup" class="float-right bg-orange-500 hover:bg-orange-600 text-white text-4xl font-medium px-4 pb-1 rounded-full shadow-lg">
+            <a ng-click="modalOpen = true" class="cursor-pointer float-right bg-orange-500 hover:bg-orange-600 text-white text-4xl font-medium px-4 pb-1 rounded-full shadow-lg">
             +</a>
         </div>
     </div>
 
-    <div id="add-item-popup" class="overlay fixed inset-0 invisible opacity-0">
+    <div ng-class="{'open-popup' : modalOpen}" class="fixed inset-0 invisible opacity-0">
         <div class="popup mx-auto my-48 p-4 bg-white rounded w-3/4 md:w-1/4 relative shadow-2xl">
             <h2 class="font-medium text-xl mt-0">Add here</h2>
-            <a class="close absolute text-3xl" href="#">&times;</a>
+            <a class="cursor-pointer close absolute text-3xl" ng-click="modalOpen = false;newEventText=''">&times;</a>
             <div class="flex mt-4">
                 <form novalidate name="myForm" ng-submit="addTodoEvent()" class="flex flex-col md:flex-row">
                     <input ng-model="newEventText" name="newEventText" required class="border-b border-b-2 border-orange-500 md:w-3/4 appearance-none text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Add event">
@@ -44,15 +44,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-    <!-- <script type="text/javascript">
-        $(document).ready(function() {
-            $('#popup-add-button').on('click', function() {
-                $('#add-item-popup').addClass('invisible');
-            });
-        });
-    </script> -->
 </body>
 
 </html>

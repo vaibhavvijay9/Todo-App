@@ -4,6 +4,8 @@ app.controller('TodoAppController', function($scope) {
 
     $scope.today = new Date();
 
+    $scope.modalOpen = false;
+
     $scope.events = [
         { text: 'learn node', done: true },
         { text: 'develop corner using MEAN', done: false }
@@ -11,7 +13,7 @@ app.controller('TodoAppController', function($scope) {
 
     $scope.addTodoEvent = function() {
         $scope.events.push({ text: $scope.newEventText, done: false });
-        document.getElementById('add-item-popup').classList.add('close-modal-on-submit');
+        $scope.newEventText = "";
+        $scope.modalOpen = false;
     }
-
 });
