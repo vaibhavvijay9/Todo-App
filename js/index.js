@@ -6,10 +6,7 @@ app.controller('TodoAppController', function($scope) {
 
     $scope.modalOpen = false;
 
-    $scope.events = [
-        { text: 'learn node', done: true },
-        { text: 'develop corner using MEAN', done: false }
-    ];
+    $scope.events = [];
 
     $scope.addTodoEvent = function() {
         $scope.events.push({ text: $scope.newEventText, done: false });
